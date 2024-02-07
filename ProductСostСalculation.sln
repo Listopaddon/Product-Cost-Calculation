@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductСostСalculation", "ProductСostСalculation\ProductСostСalculation.csproj", "{CAB9D856-B16E-4DF4-BFF9-AA5B1A827A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessLogicLeather", "BuisnessLogicLeather\BuisnessLogicLeather.csproj", "{87B98786-B6A4-4D67-A5F9-8F98A553456A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAB9D856-B16E-4DF4-BFF9-AA5B1A827A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB9D856-B16E-4DF4-BFF9-AA5B1A827A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB9D856-B16E-4DF4-BFF9-AA5B1A827A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB9D856-B16E-4DF4-BFF9-AA5B1A827A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87B98786-B6A4-4D67-A5F9-8F98A553456A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87B98786-B6A4-4D67-A5F9-8F98A553456A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87B98786-B6A4-4D67-A5F9-8F98A553456A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87B98786-B6A4-4D67-A5F9-8F98A553456A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D62E0AE6-2752-4CBE-AF6F-C6C96C6FEB7E}
+	EndGlobalSection
+EndGlobal
