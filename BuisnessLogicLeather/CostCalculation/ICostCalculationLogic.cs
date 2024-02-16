@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BuisnessLogicLeather.Models;
 
 namespace BuisnessLogicLeather.CostCalculation
 {
-    internal class ICostCalculationLogic
+    public interface ICostCalculationLogic
     {
+        public void UpdateCostCalculation(CostCalculationModel costModel);
+        public decimal ResultCost(CostCalculationModel costModel, decimal pricePerManHour);
     }
 }
