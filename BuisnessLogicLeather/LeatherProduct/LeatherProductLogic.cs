@@ -5,7 +5,12 @@ namespace BuisnessLogicLeather.LeatherProduct
 {
     public class LeatherProductLogic : ILeatherProductModel
     {
-        DS<LeatherProductModel> dataService = new DS<LeatherProductModel>();
+        IDS<LeatherProductModel> dataService;
+
+        public LeatherProductLogic(IDS<LeatherProductModel> dataService)
+        {
+            this.dataService = dataService;
+        }
 
         public void AddLeatherProduct(string nameProduct, TypeProduct typeProduct, string skinType,
                                       string sizeProduct, string colorProduct, string descriptionProduct)

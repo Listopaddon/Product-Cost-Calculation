@@ -2,7 +2,6 @@
 {
     public class CostCalculationModel
     {
-        private Guid idCost;
         private decimal skinArea;
         private decimal pricePerSquarMeter;
         private decimal discountPercentage;
@@ -12,7 +11,6 @@
         public CostCalculationModel(decimal skinArea, decimal pricePerSquarMeter, decimal discountPercentage,
                                     decimal timeSpentOnProduction, decimal costOfAccessories)
         {
-            this.idCost = Guid.NewGuid();
             this.skinArea = skinArea;
             this.pricePerSquarMeter = pricePerSquarMeter;
             this.discountPercentage = discountPercentage;
@@ -20,7 +18,6 @@
             this.costOfAccessories = costOfAccessories;
         }
 
-        public Guid IdCost { get { return idCost; } }
         public decimal SkinArea { get { return skinArea; } set { skinArea = value; } }
         public decimal PricePerSquarMeter { get { return pricePerSquarMeter; } set { pricePerSquarMeter = value; } }
         public decimal DiscountPercentage { get { return discountPercentage; } set { discountPercentage = value; } }

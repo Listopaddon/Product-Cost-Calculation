@@ -4,7 +4,7 @@ namespace BuisnessLogicLeather.CostCalculation
 {
     public interface ICostCalculationLogic
     {
-        public void UpdateCostCalculation(CostCalculationModel costModel);
+        public void UpdateCostCalculation(Guid idLeatheProduct, CostCalculationModel costModel);
         public decimal ResultCost(CostCalculationModel costModel, decimal pricePerManHour);
     }
 }

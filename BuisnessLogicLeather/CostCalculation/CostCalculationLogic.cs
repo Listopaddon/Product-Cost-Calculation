@@ -6,13 +6,19 @@ namespace BuisnessLogicLeather.CostCalculation
 {
     public class CostCalculationLogic : ICostCalculationLogic
     {
-        DS<LeatherProductModel> dateService = new DS<LeatherProductModel>();
-        public void UpdateCostCalculation(CostCalculationModel costModel)
+        IDS<LeatherProductModel> dateService;
+
+        public CostCalculationLogic(IDS<LeatherProductModel> dateService)
+        {
+            this.dateService = dateService;
+        }
+
+        public void UpdateCostCalculation(Guid idLeatherproduct, CostCalculationModel costModel)
         {
             List<LeatherProductModel> productModels = dateService.LoadData();
             for (int i = 0; i < productModels.Count; i++)
             {
-                if (productModels[i].CostProduct.IdCost == costModel.IdCost)
+                if (productModels[i].IdProduct == idLeatherproduct)
                 {
                     productModels[i].CostProduct.PricePerSquarMeter = costModel.PricePerSquarMeter;
                     productModels[i].CostProduct.SkinArea = costModel.SkinArea;
