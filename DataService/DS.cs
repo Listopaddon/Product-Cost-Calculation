@@ -18,7 +18,7 @@ namespace DataService
 
         public void SaveData(List<T> users)
         {
-            string jsonData = JsonConvert.SerializeObject(users);
+            string jsonData = JsonConvert.SerializeObject(users,Formatting.Indented);
             File.WriteAllText(filePath, jsonData);
         }
     }

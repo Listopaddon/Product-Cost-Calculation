@@ -36,6 +36,11 @@ namespace BuisnessLogicLeather.CostCalculation
         {
             decimal resultTime = costModel.TimeSpentOnProduction * pricePerManHour;
             decimal resultPricePerSkin = costModel.SkinArea * costModel.PricePerSquarMeter;
+            if (costModel.DiscountPercentage == 0)
+            {
+                return (resultTime + resultPricePerSkin + costModel.CostOfAccessories);
+            }
+
             decimal resultPrice = (resultTime + resultPricePerSkin + costModel.CostOfAccessories) / costModel.DiscountPercentage;
 
             return resultPrice;

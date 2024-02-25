@@ -11,7 +11,7 @@ namespace BuisnessLogicLeather.LeatherProduct
     {
         public void AddLeatherProduct(string nameProduct, TypeProduct typeProduct, string skinType,
                                       string sizeProduct, string colorProduct, string descriptionProduct);
-        public void UpdateLeatherProduct(LeatherProductModel leatherProduct);
+        public void UpdateLeatherProduct(Guid idModel, LeatherProductModel leatherProduct);
         public void DeleteLeatherProduct(Guid guidModel);
         public List<LeatherProductModel> GetLeatherProducts();
         public LeatherProductModel GetLeatherProduct(Guid guidModel);

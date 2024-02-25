@@ -1,7 +1,7 @@
 ﻿using DataService;
 using Newtonsoft.Json;
 
-namespace UnitTestForBS.UnitTestForCostCalculation.SubObjects
+namespace UnitTestForBS.SubObjects
 {
     public class SubDataService<T> : IDS<T>
     {
@@ -19,7 +19,7 @@ namespace UnitTestForBS.UnitTestForCostCalculation.SubObjects
 
         public void SaveData(List<T> users)
         {
-            string jsonData = JsonConvert.SerializeObject(users);
+            string jsonData = JsonConvert.SerializeObject(users, Formatting.Indented);
             File.WriteAllText(filePath, jsonData);
         }
     }
