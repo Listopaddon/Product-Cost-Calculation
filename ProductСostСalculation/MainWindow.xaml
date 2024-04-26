@@ -7,22 +7,35 @@
         mc:Ignorable="d"
         Title="Моя прога для определения стоимости изделия" Height="450" Width="800">
     <Grid>
-        <Grid>
-            <WrapPanel Margin="10,10,10,370">
-                <Button Name="Add" Width="58" Height="20" Background="GreenYellow" HorizontalAlignment="Left" Margin="0 0 10 0">Добавить</Button>
-                <Button Name="Change" Width="68" Height="20" Background="Azure" HorizontalAlignment="Center" Margin="0 0 10 0">Исправить</Button>
-                <Button Name="Delete" Width="58" Height="20" Background="Red" HorizontalAlignment="Center" Margin="0 0 10 0">Удалить</Button>
-            </WrapPanel>
-            <Grid Margin="0,69,0,0">
-                <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Class1s}">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price}"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Time" Width="*" Binding="{Binding Time}"></DataGridTextColumn>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </Grid>
-        </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+            <Canvas Grid.Row="0">
+                <Button x:Name="AddProduct" Content="Добавить" Canvas.Top="10" Canvas.Left="10"></Button>
+                <Button x:Name="ChangeProduct" Content="Изменить" Canvas.Top="10" Canvas.Left="80"></Button>
+                <Button x:Name="DeleteProduct" Content="Удалить" Canvas.Top="10" Canvas.Left="150"></Button>
+                <Expander   Header="Отобразить" Canvas.Top="10" Canvas.Left="230">
+                    <StackPanel>
+                        <Button x:Name="ShowAllProducts" Width="100" Height="20">Отобразить всё</Button>
+                    <Expander Header="Отобразить по типу">
+                            <StackPanel>
+                                <RadioButton Content="Кошелёк"></RadioButton>
+                                <RadioButton Content="Мужская сумка"></RadioButton>
+                                <RadioButton Content="Женская сумка"></RadioButton>
+                                <RadioButton Content="Рюкзак"></RadioButton>
+                                <RadioButton Content="Лонгер" Checked="RadioButton_Checked"></RadioButton>
+                                <RadioButton Content="Браслеты и ремешки для часов"></RadioButton>
+                                <RadioButton Content="Другое"></RadioButton>
+                            </StackPanel>
+                        </Expander>
+                    </StackPanel>
+                </Expander>
+            </Canvas>
+
+        <DataGrid Grid.Row="1">
+            
+        </DataGrid>
     </Grid>
 
 </Window>
