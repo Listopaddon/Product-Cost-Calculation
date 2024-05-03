@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuisnessLogicLeather.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UnitTestForBS.SubObjects;
 
 namespace ProductСostСalculation
 {
@@ -23,11 +25,15 @@ namespace ProductСostСalculation
         public MainWindow()
         {
             InitializeComponent();
-        }
+            SubDataService<LeatherProductModel> subData = new SubDataService<LeatherProductModel>();
+            LeatherProductModel model = new LeatherProductModel(Guid.NewGuid(), "gfdsgds", TypeProduct.Backpack, "adsada",
+                                                                 "fsafdsf", "asdasd", new CostCalculationModel(0, 0, 0, 0, 0), "sadasdas");
+            List<LeatherProductModel> Lists = new List<LeatherProductModel>();
+            Lists.Add(model);
+            subData.SaveData(Lists);
+            List<LeatherProductModel> leathers = subData.LoadData();
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
+            ProductsGrid.ItemsSource = leathers;
         }
     }
 }

@@ -8,33 +8,39 @@
         Title="Моя прога для определения стоимости изделия" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-            <Canvas Grid.Row="0">
-                <Button x:Name="AddProduct" Content="Добавить" Canvas.Top="10" Canvas.Left="10"></Button>
-                <Button x:Name="ChangeProduct" Content="Изменить" Canvas.Top="10" Canvas.Left="80"></Button>
-                <Button x:Name="DeleteProduct" Content="Удалить" Canvas.Top="10" Canvas.Left="150"></Button>
-                <Expander   Header="Отобразить" Canvas.Top="10" Canvas.Left="230">
-                    <StackPanel>
-                        <Button x:Name="ShowAllProducts" Width="100" Height="20">Отобразить всё</Button>
-                    <Expander Header="Отобразить по типу">
-                            <StackPanel>
-                                <RadioButton Content="Кошелёк"></RadioButton>
-                                <RadioButton Content="Мужская сумка"></RadioButton>
-                                <RadioButton Content="Женская сумка"></RadioButton>
-                                <RadioButton Content="Рюкзак"></RadioButton>
-                                <RadioButton Content="Лонгер" Checked="RadioButton_Checked"></RadioButton>
-                                <RadioButton Content="Браслеты и ремешки для часов"></RadioButton>
-                                <RadioButton Content="Другое"></RadioButton>
-                            </StackPanel>
-                        </Expander>
+        <Canvas Grid.Row="0">
+            <Button x:Name="AddProduct" Content="Добавить" Canvas.Top="10" Canvas.Left="10"></Button>
+            <Button x:Name="ChangeProduct" Content="Изменить" Canvas.Top="10" Canvas.Left="80"></Button>
+            <Button x:Name="DeleteProduct" Content="Удалить" Canvas.Top="10" Canvas.Left="150"></Button>
+            <Button x:Name="ShowAllProducts" Canvas.Top="10" Canvas.Left="210">Отобразить всё</Button>
+            <StackPanel Canvas.Top="10" Canvas.Left="310">
+                <Expander Header="Отобразить по типу" >
+                    <StackPanel  Orientation="Horizontal" >
+                        <Button x:Name="Wallet" Content="Кошелёк" Height ="19" Margin=" 0 0 3 0"></Button>
+                        <Button x:Name="Menbag" Content="Мужская сумка" Height ="19" Margin=" 0 0 3 0"></Button>
+                        <Button x:Name="Ladybag" Content="Женская сумка" Height ="19" Margin=" 0 0 3 0"></Button>
+                        <Button x:Name="BagPag" Content="Рюкзак" Height ="19" Margin=" 0 0 3 0"></Button>
+                        <Button x:Name="Longer" Content="Лонгер" Height ="19" Margin=" 0 0 3 0"></Button>
+                        <Button x:Name="BeltsAndWatchBands" Content="Браслеты и ремешки для часов" Height ="19" Margin=" 0 0 3 0"></Button>
+                        <Button x:Name="Other" Content="Другое" Height ="19" Margin=" 0 0 3 0"></Button>
                     </StackPanel>
                 </Expander>
-            </Canvas>
+            </StackPanel>
+        </Canvas>
 
-        <DataGrid Grid.Row="1">
-            
+        <DataGrid Grid.Row="1" x:Name="ProductsGrid" AutoGenerateColumns="False" ItemsSource="{Binding leathers}">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="nameProductUI" Header="Наименование продукта" Binding="{Binding Path=NameProduct}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="typeProduct" Header="Тип продукта" Binding="{Binding Path=TypeProduct}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="skinType" Header="Вид кожи" Binding="{Binding Path=SkinType}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="sizeProduct" Header="Размеры (длина/ширина)" Binding ="{Binding Path=SizeProduct}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="colorProduct" Header="Цвет изделия" Binding="{Binding Path=ColorProduct}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="costProduct" Header="Стоимость изделия" Binding="{Binding Path=CostProduct}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="descriptionProduct" Header="Описание" Binding="{Binding Path=DescriptionProduct}" IsReadOnly="True"></DataGridTextColumn>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 

@@ -1,8 +1,13 @@
-﻿using MassTransit;
+﻿using BuisnessLogicLeather.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BuisnessLogicLeather.Models
+namespace ProductСostСalculation.ViewModels.LeatherProductViewModel
 {
-    public class LeatherProductModel
+    public class LeatherProductViewModel
     {
         private Guid idProduct;
         private string nameProduct;
@@ -13,7 +18,7 @@ namespace BuisnessLogicLeather.Models
         private CostCalculationModel costProduct;
         private string descriptionProduct;
 
-        public LeatherProductModel(Guid idProduct, string nameProduct, TypeProduct typeProduct, string skinType,
+        public LeatherProductViewModel(Guid idProduct, string nameProduct, TypeProduct typeProduct, string skinType,
                                    string sizeProduct, string colorProduct, CostCalculationModel costProduct, string descriptionProduct)
         {
 
