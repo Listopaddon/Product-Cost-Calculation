@@ -34,6 +34,6 @@ namespace BuisnessLogicLeather.Models
         public string SizeProduct { get { return sizeProduct; } set { sizeProduct = value; } }
         public string ColorProduct { get { return colorProduct; } set { colorProduct = value; } }
         public CostCalculationModel CostProduct { get { return costProduct; } set { costProduct = value; } }
-        public string DescriptionProduct { get { return descriptionProduct; } set { descriptionProduct = value; } }
+        public string DescriptionProduct { get { return descriptionProduct; } set { descriptionProduct = value; } }        
     }
 }
