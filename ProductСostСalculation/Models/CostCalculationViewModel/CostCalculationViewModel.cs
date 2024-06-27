@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductСostСalculation.ViewModels.CostCalculationViewModel
+namespace ProductСostСalculation.Models.CostCalculationViewModel
 {
     public class CostCalculationViewModel
     {

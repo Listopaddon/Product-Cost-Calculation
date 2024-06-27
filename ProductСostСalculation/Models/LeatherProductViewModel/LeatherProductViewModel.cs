@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductСostСalculation.ViewModels.LeatherProductViewModel
+namespace ProductСostСalculation.Models.LeatherProductViewModel
 {
     public class LeatherProductViewModel
     {

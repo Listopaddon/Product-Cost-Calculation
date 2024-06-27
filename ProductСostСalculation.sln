@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuisnessLogicLeather", "Bui
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService", "DataService\DataService.csproj", "{B20D58AF-DD53-4761-80B6-7A7CC6492872}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestForBS", "UnitTestForBS\UnitTestForBS.csproj", "{070A4FB0-A9EB-4AB6-98EF-58222FC53472}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestForBS", "UnitTestForBS\UnitTestForBS.csproj", "{070A4FB0-A9EB-4AB6-98EF-58222FC53472}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

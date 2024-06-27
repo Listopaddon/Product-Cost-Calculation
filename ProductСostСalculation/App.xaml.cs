@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Caliburn.Micro;
 using System.Windows;
 
 namespace ProductСostСalculation
@@ -11,7 +6,7 @@ namespace ProductСostСalculation
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : AppBootstrapper
+    public partial class App : Application
     {
 
     }
